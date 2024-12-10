@@ -1,5 +1,9 @@
 import "@/app/_styles/globals.css";
 
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({ subsets: ["latin"], display: "swap" });
+
 import Header from "./_components/Header";
 
 export const metadata = {
@@ -18,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-primary-950 antialiased flex flex-col text-primary-100 min-h-screen`}
+        className={`${josefin} bg-primary-950 antialiased flex flex-col text-primary-100 min-h-screen`}
       >
         <Header />
 
